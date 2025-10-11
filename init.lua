@@ -1,4 +1,4 @@
--- Map leader
+-- Map leader--
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 -- Set nerd font
@@ -7,6 +7,14 @@ vim.g.have_nerd_font = true
 vim.o.number = true
 -- Make line relative numbers default
 vim.o.relativenumber = true
+--Length of \t character
+vim.o.tabstop = 4
+vim.o.softtabstop = 0
+vim.o.shiftwidth = 0
+-- Round indentation to multiples of 'shiftwidth'
+vim.o.shiftround = true
+-- Insert space instead of \t
+vim.o.expandtab = true
 -- Don't show the mode, since it's already in the status line
 vim.o.showmode = false
 -- Sync clipboard between OS and Neovim.
@@ -266,7 +274,7 @@ require('lazy').setup({
       local servers = {
         -- clangd = {},
         -- gopls = {},
-        -- pyright = {},
+        pyright = {},
         -- rust_analyzer = {},
         -- ts_ls = {},
         lua_ls = {
@@ -442,7 +450,7 @@ require('lazy').setup({
   -- require 'kickstart.plugins.neo-tree',
   -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
   --  Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
-  -- { import = 'custom.plugins' },
+  { import = 'custom.plugins' },
 }, {
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the
